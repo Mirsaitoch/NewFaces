@@ -36,7 +36,7 @@ struct ContentView: View {
     
     private var peopleListView: some View {
         List(viewModel.peopleList.sorted()) { person in
-            NavigationLink(value: person) {
+            NavigationLink(destination: DetailPersonView(name: person.name, image: viewModel.fromDataToImage(data: person.imageData), latitude: person.latitude, longitude: person.longitude)) {
                 HStack{
                     viewModel.fromDataToImage(data: person.imageData)
                         .resizable()
@@ -47,9 +47,6 @@ struct ContentView: View {
                         .font(.headline)
                 }
             }
-        }
-        .navigationDestination(for: Person.self) { person in
-            personProfileView(for: person)
         }
     }
     

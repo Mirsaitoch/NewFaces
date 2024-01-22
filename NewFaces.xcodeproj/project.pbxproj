@@ -14,7 +14,9 @@
 		3B07E7322B5D9AA900564C6C /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B07E7312B5D9AA900564C6C /* Person.swift */; };
 		3B07E7342B5D9CB700564C6C /* ProfilePersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B07E7332B5D9CB700564C6C /* ProfilePersonView.swift */; };
 		3B07E73A2B5DB92300564C6C /* ContentView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B07E7392B5DB92300564C6C /* ContentView-ViewModel.swift */; };
-		3BF8CFB62B5E6700001700F3 /* UsersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF8CFB52B5E6700001700F3 /* UsersListView.swift */; };
+		3B23D46B2B5EFA5000612102 /* DetailPersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B23D46A2B5EFA5000612102 /* DetailPersonView.swift */; };
+		3BF8CFB92B5E94A8001700F3 /* LocationFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF8CFB82B5E94A8001700F3 /* LocationFetcher.swift */; };
+		3BF8CFBB2B5E9887001700F3 /* AddLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF8CFBA2B5E9887001700F3 /* AddLocationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +29,10 @@
 		3B07E7312B5D9AA900564C6C /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		3B07E7332B5D9CB700564C6C /* ProfilePersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePersonView.swift; sourceTree = "<group>"; };
 		3B07E7392B5DB92300564C6C /* ContentView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView-ViewModel.swift"; sourceTree = "<group>"; };
-		3BF8CFB52B5E6700001700F3 /* UsersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListView.swift; sourceTree = "<group>"; };
+		3B23D46A2B5EFA5000612102 /* DetailPersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPersonView.swift; sourceTree = "<group>"; };
+		3BF8CFB72B5E9446001700F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		3BF8CFB82B5E94A8001700F3 /* LocationFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationFetcher.swift; sourceTree = "<group>"; };
+		3BF8CFBA2B5E9887001700F3 /* AddLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,11 +65,14 @@
 		3B07E7212B5D98F800564C6C /* NewFaces */ = {
 			isa = PBXGroup;
 			children = (
+				3BF8CFB72B5E9446001700F3 /* Info.plist */,
 				3B07E7222B5D98F800564C6C /* NewFacesApp.swift */,
 				3B07E7242B5D98F800564C6C /* ContentView.swift */,
-				3BF8CFB52B5E6700001700F3 /* UsersListView.swift */,
+				3B23D46A2B5EFA5000612102 /* DetailPersonView.swift */,
 				3B07E7392B5DB92300564C6C /* ContentView-ViewModel.swift */,
+				3BF8CFB82B5E94A8001700F3 /* LocationFetcher.swift */,
 				3B07E7332B5D9CB700564C6C /* ProfilePersonView.swift */,
+				3BF8CFBA2B5E9887001700F3 /* AddLocationView.swift */,
 				3B07E7312B5D9AA900564C6C /* Person.swift */,
 				3B07E7262B5D98F900564C6C /* Assets.xcassets */,
 				3B07E7282B5D98F900564C6C /* NewFaces.entitlements */,
@@ -152,10 +160,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B07E7322B5D9AA900564C6C /* Person.swift in Sources */,
-				3BF8CFB62B5E6700001700F3 /* UsersListView.swift in Sources */,
 				3B07E73A2B5DB92300564C6C /* ContentView-ViewModel.swift in Sources */,
+				3BF8CFB92B5E94A8001700F3 /* LocationFetcher.swift in Sources */,
 				3B07E7342B5D9CB700564C6C /* ProfilePersonView.swift in Sources */,
+				3BF8CFBB2B5E9887001700F3 /* AddLocationView.swift in Sources */,
 				3B07E7252B5D98F800564C6C /* ContentView.swift in Sources */,
+				3B23D46B2B5EFA5000612102 /* DetailPersonView.swift in Sources */,
 				3B07E7232B5D98F800564C6C /* NewFacesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,6 +300,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NewFaces/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Give access to determine your location on the map";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -328,6 +340,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NewFaces/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Give access to determine your location on the map";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
